@@ -8,7 +8,8 @@ import org.openqa.selenium.support.FindBy;
 public class MyAccountPage extends ParentPageWithHeader{
     @FindBy(xpath = ".//*[text()='Logout']")
     private WebElement linkLogOut;
-
+    @FindBy(xpath = ".//*[text()='Addresses']")
+    private WebElement linkAddresses;
 
     public MyAccountPage(WebDriver webDriver) {
         super(webDriver);
@@ -24,5 +25,10 @@ public class MyAccountPage extends ParentPageWithHeader{
         Assert.assertTrue("MyAccount is not displayed"
                 , isElementDisplayed(linkLogOut));
         return this;
+    }
+
+    public AddressesPage clickOnLinkAddresses(){
+        clickOnElement(linkAddresses);
+        return new AddressesPage(webDriver);
     }
 }
