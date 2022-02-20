@@ -18,7 +18,11 @@ public class loginTest extends BaseTest {
                 .enterLoginIntoInputUserName(TestData.VALID_LOGIN)
                 .enterPassWordIntoInputPassWord(TestData.VALID_PASS)
                 .clickOnButtonLogIn()
-                .checkIsRedirectToMyAccountPage();
+                .checkIsRedirectToMyAccountPage()
+                .clickOnLinkAddresses()
+                .checkIsRedirectToAddressesPage()
+                .openEditBillingAddressPage()
+                .checkIsRedirectToEditBillingAddressPage();
 
 
     }
