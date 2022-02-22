@@ -14,8 +14,8 @@ public class AddressesPage extends ParentPageWithHeader{
     private WebElement linkEditBillingAddress;
     @FindBy(xpath = ".//*[contains(@href,'shipping')]")
     private WebElement linkEditShippingAddress;
-//    @FindBy(xpath = ".//div[@role='alert' and contains(text(),’Address changed successfully.')]")
-//    private WebElement successfulAlert;
+    @FindBy(xpath = ".//div[contains(text(),'Address changed successfully')]")
+    private WebElement successfulAlert;
 
     public AddressesPage(WebDriver webDriver) {
         super(webDriver);
